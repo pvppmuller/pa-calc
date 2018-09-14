@@ -2,9 +2,17 @@ package pa.app;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class AppTest {
+	
+	App a;
+	@BeforeEach 
+	public void init() {
+		System.out.println("@BeforeEach - Runbefore Each method");
+		App a = new App(); 
+	}
 
 	@Test
 	void testSom() {
@@ -12,7 +20,7 @@ class AppTest {
 		int y = 3;
 		
 		int som = x+y;
-		assertTrue(som==4);
+		assertTrue(a.som(x,y)==(som));
 	}
 
 	@Test
@@ -21,7 +29,7 @@ class AppTest {
 		int y = 5;
 		
 		int sub = y-x;
-		assertTrue(sub==4);
+		assertTrue(a.sub(x,y)==(sub));
 	}
 
 	@Test
@@ -30,7 +38,7 @@ class AppTest {
 		int y = 3;
 		
 		int div = x/y;
-		assertTrue(div==5);
+		assertTrue(a.div(x,y)==(div));
 	}
 
 	@Test
@@ -39,7 +47,7 @@ class AppTest {
 		int y = 3;
 		
 		int mul = x*y;
-		assertTrue(mul==15);
+		assertTrue(a.mult(x, y)==(mul));
 	}
 
 }

@@ -8,68 +8,66 @@ import java.util.logging.Logger;
 <span class="nc" id="L8">	private static Logger logger = Logger.getLogger(App.class.getName());</span>
 	
 	
-    // --------------- Metodo principal
+
     public static void main (String args[]){ 
-        //criando um objeto c a apartir do metodo calc  
-        //Calc c = new Calc();  
-        //declarando as varíaveis  
-<span class="nc" id="L16">        int opcao = 5;  </span>
+      
+<span class="nc" id="L14">        int opcao = 5;  </span>
         int num1;  
         int num2;  
-<span class="nc" id="L19">		Scanner input = new Scanner(System.in);</span>
-<span class="nc" id="L20">		logger.info(&quot;-Escolha uma opção-&quot;);  </span>
-<span class="nc" id="L21">		logger.info(&quot;1. Soma&quot;);    </span>
-<span class="nc" id="L22">		logger.info(&quot;2. Subtracao&quot;);    </span>
-<span class="nc" id="L23">		logger.info(&quot;3. Multiplicacao&quot;);    </span>
-<span class="nc" id="L24">		logger.info(&quot;4. Divisao&quot;);    </span>
-<span class="nc" id="L25">        System.out.println(&quot;0. Sair&quot;);    </span>
-<span class="nc" id="L26">        System.out.println(&quot;Operação: &quot;);    </span>
-<span class="nc" id="L27">        opcao = input.nextInt();  </span>
-<span class="nc bnc" id="L28" title="All 2 branches missed.">        while (opcao != 0) {</span>
-<span class="nc" id="L29">			Scanner input1 = new Scanner(System.in);    </span>
-<span class="nc" id="L30">			logger.info(&quot;Qual o primeiro numero: &quot;);  </span>
-<span class="nc" id="L31">			num1 = input1.nextInt();  </span>
-<span class="nc" id="L32">			logger.info(&quot;Qual o segundo numero: &quot;);  </span>
-<span class="nc" id="L33">			num2 = input1.nextInt();</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">			if ( opcao == 1 ) {</span>
-<span class="nc" id="L35">				int operacao = som(num1, num2);</span>
-<span class="nc" id="L36">                System.out.printf(&quot;\nO resultado da soma é: %d\n&quot;, operacao);  </span>
-<span class="nc" id="L37">                break;  </span>
+<span class="nc" id="L17">		Scanner input = new Scanner(System.in);</span>
+<span class="nc" id="L18">		logger.info(&quot;-Escolha uma opção-&quot;);  </span>
+<span class="nc" id="L19">		logger.info(&quot;1. Soma&quot;);    </span>
+<span class="nc" id="L20">		logger.info(&quot;2. Subtracao&quot;);    </span>
+<span class="nc" id="L21">		logger.info(&quot;3. Multiplicacao&quot;);    </span>
+<span class="nc" id="L22">		logger.info(&quot;4. Divisao&quot;);    </span>
+<span class="nc" id="L23">        System.out.println(&quot;0. Sair&quot;);    </span>
+<span class="nc" id="L24">        System.out.println(&quot;Operação: &quot;);    </span>
+<span class="nc" id="L25">        opcao = input.nextInt();  </span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        while (opcao != 0) {</span>
+<span class="nc" id="L27">			Scanner input1 = new Scanner(System.in);    </span>
+<span class="nc" id="L28">			logger.info(&quot;Qual o primeiro numero: &quot;);  </span>
+<span class="nc" id="L29">			num1 = input1.nextInt();  </span>
+<span class="nc" id="L30">			logger.info(&quot;Qual o segundo numero: &quot;);  </span>
+<span class="nc" id="L31">			num2 = input1.nextInt();</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">			if ( opcao == 1 ) {</span>
+<span class="nc" id="L33">				int operacao = som(num1, num2);</span>
+<span class="nc" id="L34">                System.out.printf(&quot;\nO resultado da soma é: %d\n&quot;, operacao);  </span>
+<span class="nc" id="L35">                break;  </span>
             }  
-<span class="nc bnc" id="L39" title="All 2 branches missed.">            else if (opcao == 2) { </span>
-<span class="nc" id="L40">				int operacao = sub(num1, num2);</span>
-<span class="nc" id="L41">				System.out.printf(&quot;\nO resultado da subtração é: %d\n&quot;, operacao);  </span>
-<span class="nc" id="L42">				break;  </span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            else if (opcao == 2) { </span>
+<span class="nc" id="L38">				int operacao = sub(num1, num2);</span>
+<span class="nc" id="L39">				System.out.printf(&quot;\nO resultado da subtração é: %d\n&quot;, operacao);  </span>
+<span class="nc" id="L40">				break;  </span>
 			}  
-<span class="nc bnc" id="L44" title="All 2 branches missed.">			else if (opcao == 3) {</span>
-<span class="nc" id="L45">				int operacao = mult(num1, num2); </span>
-<span class="nc" id="L46">				System.out.printf(&quot;\nO resultado da multiplicação é: %d\n&quot;, operacao);    </span>
-<span class="nc" id="L47">				break;  </span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">			else if (opcao == 3) {</span>
+<span class="nc" id="L43">				int operacao = mult(num1, num2); </span>
+<span class="nc" id="L44">				System.out.printf(&quot;\nO resultado da multiplicação é: %d\n&quot;, operacao);    </span>
+<span class="nc" id="L45">				break;  </span>
 			}  
-<span class="nc bnc" id="L49" title="All 2 branches missed.">			else if (opcao == 4) {  </span>
-<span class="nc" id="L50">				int operacao = div(num1, num2);  </span>
-<span class="nc" id="L51">				System.out.printf(&quot;\nO resultado da divisão é: %d\n&quot;, operacao);   </span>
-<span class="nc" id="L52">				break;  </span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">			else if (opcao == 4) {  </span>
+<span class="nc" id="L48">				int operacao = div(num1, num2);  </span>
+<span class="nc" id="L49">				System.out.printf(&quot;\nO resultado da divisão é: %d\n&quot;, operacao);   </span>
+<span class="nc" id="L50">				break;  </span>
 			}  
 			else{  
-<span class="nc" id="L55">				System.out.println(&quot;????&quot;);  </span>
-<span class="nc" id="L56">				break;  </span>
+<span class="nc" id="L53">				System.out.println(&quot;????&quot;);  </span>
+<span class="nc" id="L54">				break;  </span>
 			}      
-        } // fim do while - usuario optou por sair
-<span class="nc" id="L59">    }  // fim do metodo principal</span>
+        } 
+<span class="nc" id="L57">    }  </span>
 
-    /*Declaração dos métodos*/  
+      
     public static int som(int num1, int num2) {
-<span class="nc" id="L63">        return num1 + num2;</span>
+<span class="nc" id="L61">        return num1 + num2;</span>
     }  
     public static int sub(int num1, int num2){
-<span class="nc" id="L66">        return num1 - num2;</span>
+<span class="nc" id="L64">        return num1 - num2;</span>
     }  
     public static int div(int num1,int num2){
-<span class="nc" id="L69">        return num1 / num2;</span>
+<span class="nc" id="L67">        return num1 / num2;</span>
     }  
     public static int mult(int num1, int num2){
-<span class="nc" id="L72">        return num1 * num2;</span>
+<span class="nc" id="L70">        return num1 * num2;</span>
     }  
 }
 
