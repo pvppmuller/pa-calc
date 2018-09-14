@@ -1,29 +1,45 @@
 package pa.app;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-/**
- * Unit test for Maven JUnit 5 - Hello world!
- * @author  Paulo Araújo
- * @version 1.0
- */
-public class AppTest 
-{
-	@BeforeEach 
-	public void init() {
-		System.out.println("@BeforeEach - Runbefore Each method");
-	}	
-	
-    @DisplayName("First Test - concat")
+class AppTest {
+
 	@Test
-	void testConcat() {
-		App ap = new App();
-		String res = ap.concat("Hello"," world!");
-		// Test concat example method
-		assertEquals("Hello world!", res);
-	}	
+	void testSom() {
+		int x = 1;
+		int y = 3;
+		
+		int som = x+y;
+		assertTrue(som==4);
+	}
+
+	@Test
+	void testSub() {
+		int x = 1;
+		int y = 5;
+		
+		int sub = y-x;
+		assertTrue(sub==4);
+	}
+
+	@Test
+	void testDiv() {
+		int x = 15;
+		int y = 3;
+		
+		int div = x/y;
+		assertTrue(div==5);
+	}
+
+	@Test
+	void testMult() {
+		int x = 5;
+		int y = 3;
+		
+		int mul = x*y;
+		assertTrue(mul==15);
+	}
+
 }
